@@ -89,7 +89,7 @@ const AddTeacher = () => {
             type="text"
             id="name"
             name="name"
-            value={teacher.name}
+            value={teacher?.name}
             onChange={handleChange}
             className="input-field"
           />
@@ -100,7 +100,7 @@ const AddTeacher = () => {
             type="text"
             id="fatherName"
             name="fatherName"
-            value={teacher.fatherName}
+            value={teacher?.fatherName}
             onChange={handleChange}
             className="input-field"
           />
@@ -112,7 +112,7 @@ const AddTeacher = () => {
             type="phone"
             id="phone"
             name="phone"
-            value={teacher.phone}
+            value={teacher?.phone}
             onChange={handleChange}
             className="input-field"
           />
@@ -123,7 +123,7 @@ const AddTeacher = () => {
             type="email"
             id="email"
             name="email"
-            value={teacher.email}
+            value={teacher?.email}
             onChange={handleChange}
             className="input-field"
           />
@@ -134,7 +134,7 @@ const AddTeacher = () => {
             type="date"
             id="dateOfBirth"
             name="dateOfBirth"
-            value={teacher.dateOfBirth}
+            value={teacher?.dateOfBirth}
             onChange={handleChange}
             className="input-field"
           />
@@ -146,7 +146,7 @@ const AddTeacher = () => {
             type="address"
             id="address"
             name="address"
-            value={teacher.address}
+            value={teacher?.address}
             onChange={handleChange}
             className="input-field"
           />

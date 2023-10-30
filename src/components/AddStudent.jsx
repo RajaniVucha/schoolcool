@@ -103,7 +103,7 @@ const AddStudent = () => {
             type="text"
             id="name"
             name="name"
-            value={student.name}
+            value={student?.name}
             onChange={handleChange}
             className="input-field"
           />
@@ -114,7 +114,7 @@ const AddStudent = () => {
             type="text"
             id="fatherName"
             name="fatherName"
-            value={student.fatherName}
+            value={student?.fatherName}
             onChange={handleChange}
             className="input-field"
           />
@@ -125,7 +125,7 @@ const AddStudent = () => {
             type="text"
             id="motherName"
             name="motherName"
-            value={student.motherName}
+            value={student?.motherName}
             onChange={handleChange}
             className="input-field"
           />
@@ -136,7 +136,7 @@ const AddStudent = () => {
             type="phone"
             id="phone"
             name="phone"
-            value={student.phone}
+            value={student?.phone}
             onChange={handleChange}
             className="input-field"
           />
@@ -147,7 +147,7 @@ const AddStudent = () => {
             type="email"
             id="email"
             name="email"
-            value={student.email}
+            value={student?.email}
             onChange={handleChange}
             className="input-field"
           />
@@ -158,7 +158,7 @@ const AddStudent = () => {
             type="date"
             id="dateOfBirth"
             name="dateOfBirth"
-            value={student.dateOfBirth}
+            value={student?.dateOfBirth}
             onChange={handleChange}
             className="input-field"
           />
@@ -169,7 +169,7 @@ const AddStudent = () => {
             type="text"
             id="grade"
             name="grade"
-            value={student.grade}
+            value={student?.grade}
             onChange={handleChange}
             className="input-field"
           />
@@ -180,7 +180,7 @@ const AddStudent = () => {
             type="address"
             id="address"
             name="address"
-            value={student.address}
+            value={student?.address}
             onChange={handleChange}
             className="input-field"
           />
