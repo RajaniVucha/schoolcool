@@ -87,7 +87,7 @@ const EditTeacher = (props) => {
     if (validateForm()) {
       try {
         const response = await fetch(
-          `https://localhost:3000/teachers/${teacherId}`,
+          `http://localhost:3000/teachers/${teacherId}`,
           {
             method: "PUT",
             headers: {

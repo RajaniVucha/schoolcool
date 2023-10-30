@@ -138,7 +138,7 @@ export const SchoolProvider = ({ children }) => {
   const getStudentsByClass = async (grade) => {
     try {
       const response = await fetch(
-        `https://localhost:3000/students/?grade=${grade}`,
+        `http://localhost:3000/students/?grade=${grade}`,
         {
           method: "GET",
           headers: {
@@ -152,7 +152,7 @@ export const SchoolProvider = ({ children }) => {
       }
 
       const data = await response.json();
-      // console.log(data); // Log the data from the response
+      console.log(data); // Log the data from the response
       setStudentData(data);
     } catch (error) {
       console.error("Error fetching student data:", error);
@@ -164,7 +164,7 @@ export const SchoolProvider = ({ children }) => {
     // console.log(`http://localhost:3000/students/?_id=${studentId}`);
     try {
       const response = await fetch(
-        `https://localhost:3000/students/?_id=${studentId}`,
+        `http://localhost:3000/students/?_id=${studentId}`,
         {
           method: "GET",
           headers: {
@@ -191,7 +191,7 @@ export const SchoolProvider = ({ children }) => {
     //console.log(`http://localhost:3000/teachers/?_id=${teacherId}`);
     try {
       const response = await fetch(
-        `https://localhost:3000/teachers/?_id=${teacherId}`,
+        `http://localhost:3000/teachers/?_id=${teacherId}`,
         {
           method: "GET",
           headers: {
@@ -215,7 +215,7 @@ export const SchoolProvider = ({ children }) => {
   //fetch teachers data
   const fetchTeachersData = async () => {
     try {
-      const response = await fetch("https://localhost:3000/teachers/");
+      const response = await fetch("http://localhost:3000/teachers/");
       // console.log(response);
       const data = await response.json();
       setTeacherData(data);

@@ -45,7 +45,7 @@ const EditStudent = (props) => {
 
     try {
       const response = await fetch(
-        `https://localhost:3000/students/${studentId}`,
+        `http://localhost:3000/students/${studentId}`,
         {
           method: "PUT",
           headers: {
