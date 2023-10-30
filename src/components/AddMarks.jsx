@@ -39,16 +39,13 @@ const AddMarks = (props) => {
     e.preventDefault();
     console.log("hello");
     try {
-      const response = await fetch(
-        "https://schoolcool-two.vercel.app/reports",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(reports),
-        }
-      );
+      const response = await fetch("https://localhost:3000/reports", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reports),
+      });
 
       if (response.ok) {
         // Handle a successful response, e.g., display a success message

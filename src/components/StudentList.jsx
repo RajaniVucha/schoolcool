@@ -15,7 +15,7 @@ const StudentList = (props) => {
   } = useContext(SchoolContext);
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     if (isLoggedIn) navigate("/students");
     else navigate("/");
@@ -24,7 +24,7 @@ const StudentList = (props) => {
   const handleDelete = async (_id) => {
     console.log(_id);
     try {
-      const response = await fetch(`https://schoolcool-two.vercel.app/students/${_id}`, {
+      const response = await fetch(`https://localhost:3000/students/${_id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

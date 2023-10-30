@@ -45,7 +45,7 @@ const EditStudent = (props) => {
 
     try {
       const response = await fetch(
-        `https://schoolcool-two.vercel.app/students/${studentId}`,
+        `https://localhost:3000/students/${studentId}`,
         {
           method: "PUT",
           headers: {
