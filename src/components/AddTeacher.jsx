@@ -7,6 +7,7 @@ const AddTeacher = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setTeacher({ ...teacher, [name]: value });
+    console.log(teacher);
   };
   const validateForm = () => {
     var name = document.forms["teacherForm"]["name"].value;
