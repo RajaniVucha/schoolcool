@@ -5,7 +5,9 @@ const AddTeacher = () => {
   const { teacher, setTeacher, setAddPage } = useContext(SchoolContext);
 
   const handleChange = (e) => {
+    alert(e.target);
     const { name, value } = e.target;
+    console.log(name);
     setTeacher({ ...teacher, [name]: value });
     console.log(teacher);
   };
