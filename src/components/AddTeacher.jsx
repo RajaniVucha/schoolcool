@@ -53,6 +53,7 @@ const AddTeacher = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(teacher);
     if (validateForm()) {
       // Add code to handle form submission (e.g., sending data to the server)
       try {
