@@ -1,15 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import SchoolContext from "./SchoolContext";
 
 const AddTeacher = () => {
-  const { teacher, setTeacher, setAddPage } = useContext(SchoolContext);
-
+  const { setAddPage } = useContext(SchoolContext);
+  const [teacher, setTeacher] = useState({
+    name: "",
+    fatherName: "",
+    phone: "",
+    email: "",
+    dateOfBirth: "",
+    address: "",
+  });
   const handleChange = (e) => {
     alert(e.target);
-    /*const { name, value } = e.target;
+    const { name, value } = e.target;
     console.log(name);
     setTeacher({ ...teacher, [name]: value });
-    console.log(teacher);*/
+    console.log(teacher);
   };
   const validateForm = () => {
     var name = document.forms["teacherForm"]["name"].value;

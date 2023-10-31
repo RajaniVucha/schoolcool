@@ -1,9 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import SchoolContext from "./SchoolContext";
 
 const AddStudent = () => {
-  const { student, setStudent, setAddPage } = useContext(SchoolContext);
-
+  const { setAddPage } = useContext(SchoolContext);
+  const [student, setStudent] = useState({
+    name: "",
+    fatherName: "",
+    motherName: "",
+    phone: "",
+    email: "",
+    address: "",
+    dateOfBirth: "",
+    grade: "",
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setStudent({ ...student, [name]: value });
