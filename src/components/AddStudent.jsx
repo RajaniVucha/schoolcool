@@ -113,7 +113,7 @@ const AddStudent = () => {
             id="name"
             name="name"
             value={student?.name}
-            onChange={handleChange}
+            onChange={alert("hello")}
             className="input-field"
           />
         </div>
