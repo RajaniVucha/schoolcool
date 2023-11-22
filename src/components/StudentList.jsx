@@ -24,12 +24,15 @@ const StudentList = (props) => {
   const handleDelete = async (_id) => {
     console.log(_id);
     try {
-      const response = await fetch(`http://localhost:3000/students/${_id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://schoolcool-backend.vercel.app/students/${_id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         // Handle a successful response, e.g., display a success message

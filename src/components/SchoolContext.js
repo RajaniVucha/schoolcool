@@ -85,7 +85,7 @@ export const SchoolProvider = ({ children }) => {
     if (validateLoginForm()) {
       console.log(user);
       // Make a POST request to your API endpoint
-      fetch("http://localhost:3000/login", {
+      fetch("https://schoolcool-backend.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -138,7 +138,7 @@ export const SchoolProvider = ({ children }) => {
   const getStudentsByClass = async (grade) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/students/?grade=${grade}`,
+        `https://schoolcool-backend.vercel.app/students/?grade=${grade}`,
         {
           method: "GET",
           headers: {
@@ -161,10 +161,10 @@ export const SchoolProvider = ({ children }) => {
   //fetch student by Id details
   const getStudentById = async (studentId) => {
     //console.log(studentId);
-    // console.log(`http://localhost:3000/students/?_id=${studentId}`);
+    // console.log(`https://schoolcool-backend.vercel.app/students/?_id=${studentId}`);
     try {
       const response = await fetch(
-        `http://localhost:3000/students/?_id=${studentId}`,
+        `https://schoolcool-backend.vercel.app/students/?_id=${studentId}`,
         {
           method: "GET",
           headers: {
@@ -188,10 +188,10 @@ export const SchoolProvider = ({ children }) => {
   //fetch student by Id details
   const getTeacherById = async (teacherId) => {
     //console.log(studentId);
-    //console.log(`http://localhost:3000/teachers/?_id=${teacherId}`);
+    //console.log(`https://schoolcool-backend.vercel.app/teachers/?_id=${teacherId}`);
     try {
       const response = await fetch(
-        `http://localhost:3000/teachers/?_id=${teacherId}`,
+        `https://schoolcool-backend.vercel.app/teachers/?_id=${teacherId}`,
         {
           method: "GET",
           headers: {
@@ -215,7 +215,9 @@ export const SchoolProvider = ({ children }) => {
   //fetch teachers data
   const fetchTeachersData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/teachers/");
+      const response = await fetch(
+        "https://schoolcool-backend.vercel.app/teachers/"
+      );
       // console.log(response);
       const data = await response.json();
       setTeacherData(data);

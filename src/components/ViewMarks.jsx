@@ -22,10 +22,10 @@ const ViewMarks = (props) => {
     const getReportByStudent = async (id) => {
       // console.log(reports);
       //console.log(id);
-      //console.log(`http://localhost:3000/reports/?id=${id}`);
+      //console.log(`https://schoolcool-backend.vercel.app/reports/?id=${id}`);
       try {
         const response = await fetch(
-          `http://localhost:3000/reports/?id=${id}`,
+          `https://schoolcool-backend.vercel.app/reports/?id=${id}`,
           {
             method: "GET",
             headers: {
@@ -58,12 +58,15 @@ const ViewMarks = (props) => {
   const handleDelete = async (_id) => {
     console.log(_id);
     try {
-      const response = await fetch(`http://localhost:3000/reports/${_id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://schoolcool-backend.vercel.app/reports/${_id}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         // Handle a successful response, e.g., display a success message

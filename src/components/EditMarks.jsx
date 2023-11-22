@@ -29,7 +29,7 @@ const EditMarks = (props) => {
       // console.log(reports);
       try {
         const response = await fetch(
-          `http://localhost:3000/reports/?id=${studentId}`,
+          `https://schoolcool-backend.vercel.app/reports/?id=${studentId}`,
           {
             method: "GET",
             headers: {
@@ -71,7 +71,7 @@ const EditMarks = (props) => {
     console.log(newReport);
     try {
       const response = await fetch(
-        `http://localhost:3000/reports/${studentId}`,
+        `https://schoolcool-backend.vercel.app/reports/${studentId}`,
         {
           method: "PUT",
           headers: {
