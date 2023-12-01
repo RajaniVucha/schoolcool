@@ -6,7 +6,7 @@ const EditMarks = (props) => {
   const { studentId } = useParams();
   //console.log(studentId);
   const [newReport, setNewReport] = useState({});
-  const { getStudentById, studentData } = useContext(SchoolContext);
+  const { getStudentById } = useContext(SchoolContext);
   const [reports, setReports] = useState({
     telugu: "",
     hindi: "",

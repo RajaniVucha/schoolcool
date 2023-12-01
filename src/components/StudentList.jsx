@@ -67,6 +67,7 @@ const StudentList = (props) => {
                 </div>
                 <div>
                   <select name="class" id="class" onChange={handleSelect}>
+                    <option value="">Select Class</option>
                     <option value="1">class 1</option>
                     <option value="2">class 2</option>
                     <option value="3">class 3</option>
@@ -102,6 +103,7 @@ const StudentList = (props) => {
                   <th>Phone</th>
                   <th>Email Id</th>
                   <th>Date of Birth</th>
+                  <th>Class</th>
                   <th>Address</th>
                   <th>Edit</th>
                   <th>Delete</th>
@@ -118,6 +120,8 @@ const StudentList = (props) => {
                     <td>{item.phone}</td>
                     <td>{item.email}</td>
                     <td>{item.dateOfBirth}</td>
+                    <td>{item.grade}</td>
+
                     <td>{item.address}</td>
                     <td>
                       {" "}

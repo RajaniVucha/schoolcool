@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import SchoolContext from "./SchoolContext";
 
 const AddStudent = () => {
-  const { setAddPage } = useContext(SchoolContext);
+  const { setAddPage, setError } = useContext(SchoolContext);
   const [student, setStudent] = useState({
     name: "",
     fatherName: "",
@@ -13,6 +13,7 @@ const AddStudent = () => {
     dateOfBirth: "",
     grade: "",
   });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setStudent({ ...student, [name]: value });
@@ -28,7 +29,7 @@ const AddStudent = () => {
     var address = document.forms["studentForm"]["address"].value;
 
     // Name validation (only alphabetic characters and spaces allowed)
-    var namePattern = /^[A-Za-z\s]+$/;
+    var namePattern = /^[A-Za-z.\s]+$/;
     if (!name.match(namePattern)) {
       alert("Invalid name");
       return false;
@@ -46,9 +47,9 @@ const AddStudent = () => {
       return false;
     }
     // Phone number validation (simple format XXX-XXX-XXXX)
-    var phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    var phonePattern = /^\d{10}$/;
     if (!phone.match(phonePattern)) {
-      alert("Invalid phone number. Please use the format XXX-XXX-XXXX.");
+      alert("Invalid phone number.");
       return false;
     }
 
@@ -81,7 +82,7 @@ const AddStudent = () => {
 
       console.log(student);
       // Make a POST request to your API endpoint
-      fetch("https://schoolcool-backend.vercel.app/students", {
+      fetch(`https://schoolcool-backend.vercel.app/students`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,10 +94,12 @@ const AddStudent = () => {
           // Handle the API response here
           console.log(data);
           setAddPage("list");
+          setError("Student added successfully");
         })
         .catch((error) => {
           // Handle errors here
           console.error("Error:", error);
+          setError(error);
         });
       console.log("Form submitted:", student);
     }

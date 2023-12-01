@@ -40,7 +40,7 @@ const AddMarks = (props) => {
     console.log("hello");
     try {
       const response = await fetch(
-        "https://schoolcool-backend.vercel.app/reports",
+        `https://schoolcool-backend.vercel.app/reports`,
         {
           method: "POST",
           headers: {

@@ -26,6 +26,7 @@ const Reports = () => {
             </div>
             <div>
               <select name="class" id="class" onChange={handleSelect}>
+                <option value="">Select Class</option>
                 <option value="1">class 1</option>
                 <option value="2">class 2</option>
                 <option value="3">class 3</option>

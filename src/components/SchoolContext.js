@@ -83,9 +83,9 @@ export const SchoolProvider = ({ children }) => {
     event.preventDefault();
 
     if (validateLoginForm()) {
-      console.log(user);
+      console.log(`https://schoolcool-backend.vercel.app/`);
       // Make a POST request to your API endpoint
-      fetch("https://schoolcool-backend.vercel.app/login", {
+      fetch(`https://schoolcool-backend.vercel.app/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -216,7 +216,7 @@ export const SchoolProvider = ({ children }) => {
   const fetchTeachersData = async () => {
     try {
       const response = await fetch(
-        "https://schoolcool-backend.vercel.app/teachers/"
+        `https://schoolcool-backend.vercel.app/teachers/`
       );
       // console.log(response);
       const data = await response.json();

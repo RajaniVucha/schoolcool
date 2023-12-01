@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import SchoolContext from "./SchoolContext";
 
 const AddTeacher = () => {
-  const { setAddPage } = useContext(SchoolContext);
+  const { setAddPage, setError } = useContext(SchoolContext);
   const [teacher, setTeacher] = useState({
     name: "",
     fatherName: "",
@@ -68,7 +68,7 @@ const AddTeacher = () => {
       // Add code to handle form submission (e.g., sending data to the server)
       try {
         const response = await fetch(
-          "https://schoolcool-backend.vercel.app/teachers",
+          `https://schoolcool-backend.vercel.app/teachers`,
           {
             method: "POST",
             headers: {
@@ -82,12 +82,15 @@ const AddTeacher = () => {
           // Handle a successful response, e.g., display a success message
           console.log("Data sent successfully");
           setAddPage("list");
+          setError("Teacher added successfully");
         } else {
           // Handle errors, e.g., display an error message
           console.error("Error sending data");
+          setError("Error sending data");
         }
       } catch (error) {
         console.error("Error:", error);
+        setError("Error sending data");
       }
       console.log("Form submitted:", teacher);
     }

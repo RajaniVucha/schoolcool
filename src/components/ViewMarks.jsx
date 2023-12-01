@@ -22,7 +22,7 @@ const ViewMarks = (props) => {
     const getReportByStudent = async (id) => {
       // console.log(reports);
       //console.log(id);
-      //console.log(`https://schoolcool-backend.vercel.app/reports/?id=${id}`);
+      // console.log(`https://schoolcool-backend.vercel.app/reports/?id=${id}`);
       try {
         const response = await fetch(
           `https://schoolcool-backend.vercel.app/reports/?id=${id}`,
