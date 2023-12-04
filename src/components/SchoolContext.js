@@ -58,7 +58,9 @@ export const SchoolProvider = ({ children }) => {
     }
 
     if (!validatePassword(password)) {
-      alert("Invalid password.");
+      alert(
+        "Invalid password.Password length should be more than 8 with both uppercase and lowercase, numbers, and symbols"
+      );
       return false;
     }
     return true;
